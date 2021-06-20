@@ -132,7 +132,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 800px){
+@media all and (min-width: 480px){
   header{
     display:flex;
     justify-content:space-between;

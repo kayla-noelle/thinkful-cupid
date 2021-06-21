@@ -1,7 +1,7 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #6b1a22;
 }
 
@@ -32,7 +32,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -51,9 +51,6 @@ main img {
   flex: 2;
 }
 
-.item img {
-  width: 100%
-}
 /* -------  Navigation ------- */
 
 header {
@@ -67,16 +64,18 @@ header {
   font-size: 72px;
   color: #ecdbc9;
 }
-header nav ul{
+
+header nav {
   display: flex;
-  justify-content:center;
-  list-style: none;
+  justify-content: center;
 }
-header nav ul li{
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
   list-style-type: none;
-  display:flex;
-  list-style: none;
-  margin-bottom:20px;
 }
 
 header nav ul li a {
@@ -98,11 +97,14 @@ form {
 
 form label {
   font-weight: bold;
-  text-align:left;
 }
 
-form select,
-form input {
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
   margin-bottom: 20px;
   width: 180px;
 }
@@ -115,10 +117,7 @@ form button {
   padding: 15px;
   width: 100%;
 }
-form div{
-  display:flex;
-  justify-content:space-between;
-}
+
 /* -------  Footer ------- */
 
 footer {
@@ -132,42 +131,26 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px){
-  header{
-    display:flex;
-    justify-content:space-between;
-    padding: 0 20px;
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
   }
 
-header .logo{
-  font-size: 42px;
-  margin:14px 0;
-  padding-top:6px;
-}
-header nav {
-  margin-top:14px;
-}
-header nav ul li a:hover {
-  color: #bdbdbd;
+  .logo {
+    margin: 14px 0 14px 20px;
+    font-size: 42px;
+  }
+  
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
-
-/* ---  Media Queury Groups & Items --- */
-
-.group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-  margin: 10px;
-}
-
-}
